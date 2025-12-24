@@ -1,0 +1,16 @@
+# Person (name, age)
+
+# Student
+# id
+# Sxxx
+#  name: 2-10 kí tự
+# age: 18 - 30
+# faculty: IT|Accountant|Marketing
+# score: 10-100 (số nguyên)
+
+# StudentManage: CRUD, SHow all (iterator),
+# show sinh viên có học lực khá trở lên (score >= 70) Generator
+# cồng điểm cho student, ko vượt quá 100 điểm (báo lỗi nếu vượt quá 100)
+
+#Fill điểm min to max (validate max phải lớn hơn hoặc bằng min, đáp ứng điều kiện input từ 10 đến 100)
+
