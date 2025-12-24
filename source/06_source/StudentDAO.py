@@ -21,6 +21,7 @@ class StudentDAO:
     def input_student_code(self, isRequired=True, checkExist=True):
         # r => raw string
         pattern = re.compile(r"^S[0-9]{3}$")
+        
         while 1:
             code = input("Nhập mã sinh viên (SXXX): ")
 
@@ -137,6 +138,7 @@ class StudentDAO:
     def add_score(self):
         code = self.input_student_code(checkExist=False)
         student = self.findStudentByCode(code)
+        
         if student:
             while True:
                 additional_score = self.input_score(
@@ -156,6 +158,7 @@ class StudentDAO:
     def delete_student(self):
         code = self.input_student_code(checkExist=False)
         student = self.findStudentByCode(code)
+        
         if student:
             self.students.remove(student)
             print(f"Student with code {code} has been deleted.")
@@ -171,6 +174,7 @@ class StudentDAO:
             print("Min score must be less than or equal to max score.\n")
 
         filtered_students = []
+        
         for student in self.students:
             if min_score <= student.score <= max_score:
                 filtered_students.append(student)
