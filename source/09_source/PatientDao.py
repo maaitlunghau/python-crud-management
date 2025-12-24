@@ -115,10 +115,12 @@ class PatientDao:
                         patients.append(pa)
         except Exception:
             print("Loi doc file")
+            
         return patients 
     
     def save_file(self):
         with open(self.filename, mode="w",newline="") as file:
             writer = csv.writer(file)
+            
             for pa in self.patients:
                 writer.writerow([pa.id,pa.name,pa.age, pa.faculty,pa.gender])
