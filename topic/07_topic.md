@@ -17,5 +17,6 @@ abstract: IdolAbstract
 IdolManager: extend IdolAbstract:
 	- override methods
 	- CRUD functions
-	- Print Idol not yet been stored by follower (Generator)
+	- Nhập kho cho idol theo code (age >= 18)
+	- Print &  Idol not yet been stored by follower (Generator)
 		submenu: [1: ASC, 2: DESC, 3: Back menu]

@@ -129,6 +129,7 @@ class IdolManager(IdolAbstract):
     def update_idol(self):
         code = input("Enter the idol code to update: ").strip()
         idol = self.findIdolByCode(code)
+        
         if idol:
             print("Enter new details (leave blank to keep current value):")
             name = self.input_name(isRequired=False)
@@ -161,9 +162,11 @@ class IdolManager(IdolAbstract):
     # Hiểm thị các idol store = False
     def show_available_idols(self):
         available_idols = []
+        
         for idol in self.idols:
             if not idol.store:
                 available_idols.append(idol)
+                
         if available_idols:
             for idol in IdolGenerator(available_idols):
                 print(idol)
@@ -172,6 +175,7 @@ class IdolManager(IdolAbstract):
 
     def sort_available_idols_by_follower(self, ascending=True):
         available_idols = []
+        
         for idol in self.idols:
             if not idol.store:
                 available_idols.append(idol)
